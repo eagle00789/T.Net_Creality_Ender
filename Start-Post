@@ -1,0 +1,238 @@
+[h1]Creality Ender 3 topic[/h1]
+
+[center][img=500,500]https://i.imgur.com/x2thAQA.png[/img][/center]
+[justify]
+Er is een heel mooi topic over Open Source 3D printing waar de Ender 3 ook veelvuldig aan bod komt. Ik vond het tijd om, gezien de populairteit van deze printer, een apart topic te maken met wat informatie hier over. Het Open Source 3D printer topic kan je [url=https://gathering.tweakers.net/forum/list_messages/1556417]hier[/url] vinden.
+[br]
+[h2]Introductie Creality[/h2]
+Creality is een Chinees bedrijf uit Shenzen. Ik zal niet diep in gaan op hun geschiedenis, maar dit bedrijf heeft verschillende printers op de markt gebracht met wisselend succes. Zo goed als alle designs zijn gebaseerd op het [url="https://reprap.org/wiki/Prusa_i3"]reprap Prusa i3 design[/url]. 
+
+Creality bestaat al enkele jaren maar heeft zichzelf op de kaart gezet in 2017 met de CR-10 printer. Dit is een 300x300x400mm 3D printer die voor een relatief lage prijs weggezet werd. De print kwaliteit was spectaculair in verhouding tot de prijs en hierdoor is deze printer door zo goed als de hele 3D print community in eind 2017 de hemel in geprezen. Om dit in verhouding te zetten, de Anet A8 was de grootste concurent in dit segment en deze verliest een vergelijking op alle fronten behalve de prijs. Daarnaast is een stock Anet A8 brand gevaarlijk. Helaas waren de eerste CR-10 printers dit ook, maar hier kom ik later op terug.
+
+De CR-10 is opgevolgd door de CR-10S waarbij enkele verbeteringen zij doorgevoerd, waaronder de belangrijkste upgrades het moederbord (CR-10 heeft een [url="https://reprap.org/wiki/Melzi"]Melzi design[/url], CR-10S [url="https://reprap.org/wiki/List_of_electronics#8_bits_community_based.2C_tested_and_supported_electronics"]een RAMPS design[/url]) en de CR-10S is weer opgevolgd door de CR-10S Pro, wat een "single extruder" variant is van de (gefaalde) "dual extruder" CR-X.
+
+Creality heeft op bepaalde vlakken een goede naam in de community opgebouwd en op bepaalde vlakken wat zaken minder goed aangepakt.
+[b]De goede zaken:[/b]
+[list]
+[li]Creality kijkt uiterst goed naar de community en implementeerd "hacks" en commentaar van de community zeer snel in de printers[/li]
+[li]Creality doet (tegenwoordig) erg zijn best om Open Source compliant te zijn[/li]
+[li]Creality probeert veel te innoveren[/li]
+[/list]
+
+[b]De minder goede zaken[/b]
+[list]
+[li]Creality nam het in het begin niet zo nauw met de GPL licentie en publiceerde de source code niet van de printers[/li]
+[li]Creality had "thermal runaway protection" uit gezet in alle firmwares, wat voor brandgevaar zorgde[/li]
+[li]Creality implementeerd aanpassingen in printers zonder de naam of versie van het model te wijzigen dus is het een loterij of je een oud of nieuw model krijgt van dezelfde printer.[/li]
+[li]Bepaalde versies van CR-10S moederborden (2.0) hebben te zwakke condensatoren aan boord waardoor de hotend na een tijd niet meer stabiel verhit.[/li]
+[/list]
+
+[br]
+[h2]Ender 3 Technische details[/h2]
+Creality heeft in 2018 de Ender 3 op de markt gebracht. Deze printer is als open source printer op de markt gebracht en kan dus door iedereen vrij gemaakt worden. Dit gebeurd dan ook veel en zijn er veel "nep"(?) Ender 3 printers in omloop. "Nep" bedoel ik mee, niet gemaakt door Creality. Zolang de kwaliteit van de onderdelen goed is maakt het weinig uit wie de printer maakt. Alles van de Ender 3 (PCB files, B.O.M. etc.) kun je [url="https://github.com/Creality3DPrinting/Ender-3"]hier[/url] vinden.
+
+De Ender 3 heeft een 24 volt Power Supply aan booard en alle electronische zaken zoals hotend, fans, moederbord, etc. werken dus op 24 volt. Wanneer je wilt upgraden naar een E3D V6 hotend zal je dus een 24 volt versie moeten aanschaffen met 24 volt fan. Ook bijvoorbeeld het vervangen van de fans voor Noctua fans zal je 24 volt fans moeten aanschaffen.
+
+Het moederbord (zoals eerder gemeld) is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
+
+De Ender 3 gebruikt een aangepaste versie van [url="https://github.com/MarlinFirmware/Marlin/"]Marlin firmware[/url] waarbij Creality een feature heeft toegevoegd "power loss print resume". Deze feature schrijft constant de print status weg naar de SD kaart zodat als de stroom uit valt, de printer verder kan waar hij gebleven is. Het grote nadeel hier aan is dat er gigantisch veel writes naar de SD kaart gaan. Dit is zeer slecht voor de levensduur van de sd kaart.
+
+Creality verzaakt om een zogenaamde bootloader te burnen op de moederborden. Wanneer je zelf firmware wilt flashen (bijvoorbeeld stock Marlin) zal je EERST een bootloader moeten burnen alvorens te flashen. Dit kun je doen met behulp van (bijvoorbeeld) een Arduino Uno.
+
+[br]
+[h2]Ender 3 vs Pro verschillen[/h2] 
+Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar twee versies die echt verschillen van elkaar.
+De Ender 3 en de Ender 3 Pro.
+Het verschil tussen deze twee modellen is een 2040 profiel voor de X as (Bed rollers) op de Ender 3 en een 4040 profiel voor de X as op de Ender 3 pro. Op de Pro zitten de rollers dus twee keer zo ver van elkaar wat voor betere stabiliteit zorgt.
+
+De Ender 3 Pro heeft een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft.
+
+De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt. Bij de Ender 3 Pro is deze omgedraaid.
+
+Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed. Dit is erg handig voor PLA en PETG prints die zo makkelijk van het bed te krijgen zijn.
+Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!
+
+[/justify]
+[center][img=469,474]https://i.imgur.com/wx3k9Ij.png[/img][/center]
+[justify]
+[br]
+[h2]Populaire upgrades Ender 3 (kopen)[/h2]
+Een lijstje van veel voorkomende gekochte upgrades voor de Ender 3.
+
+Achter elke upgrade staan een of meerdere links naar webshops. Let op dat prijzen erg wisselend kunnen zijn dus kijk vooral ook bij andere aanbieders!
+
+[table=100%,,1,2,black,white]
+[tr][th]Nieuwe PTFE koppelingen[/th]
+[td][url=https://www.amazon.com/gp/product/B073TTWWN1/]Amazon.com[/url][/td]
+[td][/td]
+[/tr]
+[tr][td][/td]
+[td]dit is bijna een must ivm slechte kwaliteit van de stock koppelingen[/td]
+[td][/td]
+[/tr]
+[tr][th]Capricorn PTFE tube[/th]
+[td][url=https://www.amazon.com/Capricorn-Bowden-Tubing-1-75mm-filament/dp/B079P92HN9/]Amazon.com[/url][/td]
+[td][url=https://e3d-online.com/capricorn-bowden-tubing-100mm]E3D-Online.com[/url][/td]
+[/tr]
+[tr][th]Aluminium MK8 Extruder[/th]
+[td][url=https://nl.aliexpress.com/item/Upgrade-3D-Printer-Onderdelen-MK8-Extruder-Aluminium-Blok-bowden-extruder-1-75mm-Filament-voor-creality-3d/32834380573.html]Ali-Express[/url][/td]
+[td][url=https://www.banggood.com/nl/Upgraded-Aluminum-MK8-Extruder-Drive-Feed-for-CR-10-3D-Printer-Part-p-1345241.html]Banggood.com[/url][/td]
+[/tr]
+[tr][th]Auto Bed leveling (BLTouch/3D Touch of ABL sensor)[/th]
+[td][url=https://www.prusa3d.nl/product/auto-leveling-sensor-bl-touch/]Prusa3D.nl (BLTouch)[/url][/td]
+[td][url=https://nl.aliexpress.com/store/product/The-Lastest-Coming-3D-Printer-Parts-Newest-Auto-Leveling-Position-Sensor-for-CREALITY-3D-Prusa-i3/2846085_32809881053.html]AliExpress (ABL)[/url][/td]
+[/tr]
+[tr][th]Glazen build plate[/th]
+[td][url=https://nl.aliexpress.com/item/310-310mm-235-235mm-Nieuwe-Creality-3D-Ultrabase-3D-Printer-Platform-Verwarmd-Bed-Bouwen-Oppervlak-glazen/32898736899.html]Ali-Express[/url][/td]
+[td][url=https://www.amazon.co.uk/Comgrow-Glass-Creality-Printer-Ender-3/dp/B07DSC9TJQ]Amazon.co.uk[/url][/td]
+[/tr]
+[tr][th]Siliconen sok voor MK8 hotend[/th]
+[td][url=https://nl.aliexpress.com/item/Creality-3D-Printer-Heater-Block-Silicone-Cover-MK7-MK8-MK9-Hotend-for-Creality-CR-10-10S/32934135876.html]Ali-Express[/url][/td]
+[td][/td]
+[/tr]
+[tr][th]E3D V6 hotend[/th]
+[td][url=https://e3d-online.com/v6-all-metal-hotend]E3D-Online.com[/url][/td]
+[td][/td]
+[/tr]
+[tr][th]Micro SD naar SD converter kabel[/th]
+[td][url=https://www.amazon.com/48cm-Sd-micro-Card-Extender-Cable/dp/B007WYRO7O]Amazon.com[/url][/td]
+[td][/td]
+[/tr]
+[tr][th]Stepper dampeners[/th]
+[td][url=https://nl.aliexpress.com/item/Nieuwe-Komende-Creality-3D-Printer-Onderdelen-NEMA-17-Stepper-Staal-en-Rubber-Trillingsdempers-voor-3D-Printer/32847539826.html]Ali-Express[/url][/td]
+[td][url=https://www.banggood.com/Shock-Absorber-Stepper-Vibration-Damper-for-Nema17-Stepper-Motor-p-1064910.html]Banggood.com[/url][/td]
+[/tr]
+[tr][td][/td]
+[td][b]let op[/b] dat op nieuwere modellen Ender 3's het GT2 tandwiel niet meer vast zit met een schroef maar press-fit is. Hierdoor kun je GEEN dampener installeren zonder de gehele stepper motor en tandwiel te vervangen![/td]
+[td][/td]
+[/tr]
+[tr][th]Bed Springs (veren)[/th]
+[td][url=https://www.amazon.de/sourcingmap%C2%AE-10Stk-leichte-Stanzen-Kompressionsform/dp/B013G5I4US/]Amazon[/url][/td]
+[td][/td]
+[/tr]
+[tr][th]Siliconen Solid Spacer[/th]
+[td][url=https://nl.aliexpress.com/item/Siliconen-Solid-Spacer-Met-y-as-Draad-Retrain-CR-10-Effen-Bed-Mount-Trekontlasting-Beugel-Voor/32966030060.html?spm=a2g0s.9042311.0.0.27424c4d2H9PIk]Ali-Express[/url][/td]
+[td][/td]
+[/tr]
+[/table]
+
+[br]
+[h2]Populaire upgrades Ender 3 (printen)[/h2]
+Printbare upgrades voor Ender 3
+[list]
+[li][url="https://www.thingiverse.com/thing:2994683/"]PTFE connector fix[/url] [/li]
+[li][url="https://www.thingiverse.com/thing:2894097"]Filament guide[/url] (zodat filament geen smeer van Z as krijgt) [/li]
+[li][url="https://www.thingiverse.com/thing:2935204/"]Fan guard[/url] (niet voor PRO!) [/li]
+[li][url="https://www.thingiverse.com/thing:2925230"]Z motor spacer[/url] (niet voor PRO!) (Z motor zit niet geheel recht waardoor de Z as niet soepel loopt) /[/li]
+[li][url="https://www.thingiverse.com/thing:2858209/"]Kap voor achterop LCD[/url] [/li]
+[li][url="https://www.thingiverse.com/thing:2880021"]Clip voor Ribbon kabel[/url] [/li]
+[li][url="https://www.thingiverse.com/thing:2929018"]Opruimbak[/url][/li]
+[li][url="https://www.thingiverse.com/thing:2913473"]Dampening feet[/url][/li]
+[li][url="https://www.thingiverse.com/thing:2989832"]LCD ribbon cable cover [/url][/li]
+[/list]
+[br]
+[h2]Veel voorkomende issues[/h2]
+Er zijn eigenlijk niet zoveel veel voorkomende issues met de Ender 3, maar de issues die ik veel gezien heb zal ik hier noemen.
+[b]De extruder skipped[/b] - Je hebt waarschijnlijk een verstopte nozzle. Dit kan door veel verschillende redenen gebeurd zijn. Een van de redenen kan zijn door issues met de PTFE koppelingen. Haal de PTFE buis uit de hotend en maak alles schoon. Zorg dat de PTFE buis weer goed diep in de hotend komt, tegen de heatbreak aan. Zorg er ook voor dat de koppelingen goed zitten. Het beste is de koppelingen te vervangen en de PTFE buis te vervangen met Capricorn. 
+[b]De printer gaat niet meer aan[/b] - Er is een grote kans dat de power supply stuk is gegaan. Dit is vaak een condensator. Dit is zelf te fixen, maar is niet aan te raden. Vervang de PSU met een gerenomeerd merk zoals MeanWell (dit model zit al in de Ender 3 Pro). Het komt soms ook voor dat de 24v connectors op de PSU smelten ivm slechte bouw kwaliteit.
+[b]De connector van de PSU naar de controlbox is gesmolten[/b] - Helaas gebeurd dit nog wel eens. Vervang de gesmolten kabels en koop nieuwe XT60 connectors.
+[b]Mijn prints komen nooit goed van de printer, help![/b] - Er kan ontzettend veel mis zijn. Ook een combinatie van meerdere zaken.
+[list]
+[li]Het is belangrijk dat de printer goed in elkaar gezet is. Alle hoeken goed 90 graden op elkaar, belts strak, rollers goed afgesteld (niet te los en niet te strak)[/li]
+[li]Het bed moet goed level zijn. Dit is van uiterst belang. De eerste laag is het fundament van je print. [/li] 
+
+[li]Zorg er voor dat je filament van goede kwaliteit is en niet vochtig. Vochtig filament print heel slecht. Verschillende soorten filament zijn meer of minder vatbaar voor vocht, maar het blijft een veelvoorkomend issue.[/li]
+[li]Print op de juiste temperatuur voor je filament en print niet te snel.[/li]
+[/list]
+
+[b]Filament blijft niet plakken op het printbed[/b]
+Zorg dat de nozzel goed is afgesteld tov alle hoeken van het printbed. Door tussen de nozzel en het printbed een papiertje te steken en dan de wieltjes te draaien kun je die goed afstellen. Zorg dat het papier net contact maakt met het papier. Zo ga je langs elke hoek en eindigt in het midden om te testen of het daar ook goed is. Herhaal nu alle stappen nogmaals. Omdat je elke hoek instelt veranderden de overige hoeken ook weer licht. Door deze stappen 2x uit te voeren zorg je voor een goede afstellingen van het printbed tov van de nozzel. Via TH3D kun je via het menu op je printer kiezen voor Prepare --> Level Corners. De nozzel wordt naar de eerste hoek gebracht. Nadat je deze hoek hebt afgesteld kies je voor Next Point.
+
+Een handig uitleg met een snellere manier kun [url="https://www.youtube.com/watch?v=_EfWVUJjBdA"]hier[/url] vinden.
+
+Hoe vaak je dit moet doen daarover verschillen de meningen en is een kwestie van uitproberen. Zeker als je veranderd van filament of je merkt dat je prints niet goed meer hechten is het tijd om dit weer een keer uit te voeren. 
+
+Een handig site met veel voorkomende problemen en uitleg.
+https://www.simplify3d.com/support/print-quality-troubleshooting/
+
+[br]
+[h2]Ik wil ook een Ender 3 kopen. Waar kan ik deze het beste kopen?[/h2]
+Op het moment van schrijven kost een Ender 3 rond de €150 en kan Creality deze direct leveren uit Duitsland. Het duurt minder dan een week om het te leveren en je betaald geen invoerrechten gezien het uit de EU komt.
+Mijn ervaring is AliExpress de beste manier om direct bij Creality te bestellen ivm de Duitse warehouses. Creality heeft twee AliExpress shops. [url="https://creality3d.nl.aliexpress.com/store/2846085"]Creality 3D Official[/url] en [url="http://nl.aliexpress.com/store/3033013"]Ender 3 Official[/url]
+
+[url="https://www.gearbest.com/3d-printers-3d-printer-kits/pp_1845899.html?wid=1640583"]GearBest[/url] etc. bieden de Ender 3 ook aan, Kies hierbij voor een warehouse die gevestigd is in Europa om extra kosten te voorkomen. Als je een bepaalde warehouse niet meer ziet staan komt dit meestal omdat de voorraad op is. Bij het product kun je aangeven vanuit welk warehouse de printer geleverd moet worden. Om te achterhalen welke code bij welk warehouse hoort kun je hier een [url="https://couponsfromchina.com/2018/03/26/gearbest-warehouse-location/"]lijst[/url] vinden. Vanuit Frankrijk duurde dit 6 dagen en werd de printer via GLS afgeleverd. Tijdens het bestellen kun je voor 5 euro extra je printer verzekeren tijdens vervoer en wordt deze zonder problemen omgeruild. Zelf heb ik dit wel gedaan. Achteraf bleek het controller board een hoge pieptoon te geven als deze via usb wordt aangesloten. Zonder problemen wordt er nu een nieuw controller board opgestuurd. Of dit door de extra 5 euro service kwam weet ik niet maar is was mij het waard.
+
+Er zijn ook leveranciers in Nederland zoals 123-3d. Hier heb je volledige garantie volgens de Nederlandse wet, maar hier betaal je ook voor. Er zit op moment van schrijven €100 prijs verschil tussen direct van Creality en de Nederlandse aanbieders.
+[br]
+[h2]Ik heb een Ender 3 (Pro) gekocht. Hoe zet ik deze het beste in elkaar?[/h2]
+Hieronder enkele kwalitatief goede build videos
+[VIDEO=,,"Creality Ender 3 assembly and pro build tips"]https://www.youtube.com/watch?v=me8Qrwh907Q[/VIDEO]
+[VIDEO=,,"ENDER 3 PRO. Careful Assembly for Great Prints"]https://www.youtube.com/watch?v=l28DygQBSH0[/VIDEO]
+[br]
+[h2]Printer kalibreren[/h2]
+
+Na het bouwen van de printer is het verstandig om deze eerst te gaan afstellen. Hiermee verbeter je de prints en kloppen te maten ook. Zorg voor een digitale schuifmaat om alles exact op te meten.
+
+[b][i]Benodigdheden[/i][/b]
+Download [url="http://www.pronterface.com/"]Pronterface[/url] waarmee je onderstaande stappen prima kunt afstellen. Ook kun je gebruik maken van [url="https://octoprint.org/"]Octoprint[/url]  maar elk andere programma waarmee je de m-codes naar de printer kunt sturen zijn ook hiervoor te gebruiken.
+
+[i]Tip: Als je andere firmware hebt geflasht reset je de printer bios eerst. Stuur hiervoor het commando M502 naar je printer . De BIOS wordt dan gereset naar de fabrieksinstellingen. 
+Ik had dit via het menu van de printer gedaan maar dit was toch niet goed gegaan. 
+Bij het afstellen van de kubus bleken de waardes totaal niet te kloppen en was de Z as compleet verkeerd waardoor deze veel meer naar links wilde dan dat hij kon wat resulteerde in een hoop herrie en dacht dat de boel defect was. Na een reset met het commando M502 was alles gelukkig weer normaal en zag ik dat mij Z as ineens een totaal andere waarde had gekregen.[/i]
+
+
+Alle [url="http://frankieflood.blogspot.com/2013/06/pronterface-m-codes.html"]m-codes[/url]
+
+[b]Extruder caliberen[/b]
+Hiermee zorg je ervoor dat de juiste hoeveelheid filament wordt gebruikt. 
+Bij mij was de afwijking slechts een paar mm en is de eerste stap gezet naar een nog beter printer.
+https://mattshub.com/2017/04/19/extruder-calibration/
+
+[b]XYZ 20mm Calibration Cube[/b]
+https://www.thingiverse.com/thing:1278865
+
+Hiermee kun je alles goed afstellen en zorg je ervoor dat de maten van je tekening ook kloppen met je print.
+Zo was mijn kubus na het printen geen 20x20x20 maar 18x18x18.  Hoe groter het object hoe groter de afwijking wordt en dan passen onderdelen ineens niet goed in elkaar ;) 
+
+Links: standaard instellingen uit de fabriek. Rechts na het afstellen. Een behoorlijk verschil!
+
+Print de kubus opnieuw. Herhaal de kalibratie als de maten nog niet correct zijn. 
+Na 2x Kalibreren is mijn kubus exact 20x20x20 >:) 
+[img=570,376,,,"Cube"]https://tweakers.net/ext/f/9khdZnrICc2XCyCUrs10Rxpp/full.jpg[/img]
+[br]
+
+[b]Andere uitleg om de e-steps & flowrate te kalibreren[/b]
+[URL="https://m.youtube.com/watch?v=L9je8z4bHG0&feature=youtu.be"]YouTube: \[EN] Extruder and extrusion flow calibration (3D printing)[/URL]
+[br]
+
+[h2]Recept voor goedkope DIY ABL sensor (onder €10)[/h2]
+
+[list]
+[li][url="https://www.aliexpress.com/item/1-Channel-Optocoupler-Isolation-Module-Input-12V-No-Din-Rail-Holder-PLC-Processors-80KHz-PC817-EL817/32719957788.html"]Optocoupler[/url][/li]
+[li][url="https://www.aliexpress.com/item/High-Quality-LJC18A3-H-Z-BX-1-10mm-Capacitance-Proximity-Sensor-Switch-NPN-NO-DC-6/32735795048.html"]Geschikte capacitieve sensor[/url][/li]
+[li][url="http://www.aliexpress.com/item/Free-shipping-DIP-1PCS-DC-DC-Buck-Converter-Step-Down-Module-LM2596-Power-Supply-Output-1/32721507753.html"]Buck converter (24v naar 12v)[/url][/li]
+[li][url="https://www.thingiverse.com/thing:3008420"]Mount[/url][/li]
+[li][b]Bedraden[/b][/li]
+[li][img=628,472]https://i.imgur.com/Fmr5hpm.png[/img][/li]
+[li][url="http://support.th3dstudio.com/support/solutions/articles/43000460446-th3d-unified-firmware-package"]Firmware[/url][/li]
+[/list]
+[/justify]
+
+[br]
+[h2]BLTouch/3DTouch handleiding[/h2]
+Op Thingiverse staat een mooie handleiding met een zeer duidelijk uitleg hoe je de BLTouch/3DTouch moet aansluiten en hoe je de firmware moet aanpassen incl afstellen en benodige gcode. In de download zit de PDF
+[i][url="http://www.thingiverse.com/thing:2975949"]http://www.thingiverse.com/thing:2975949[/url][/i]
+
+[i]Persoonlijke tip: De pin van de BLTouch zakte tijdjes het printen steeds naar beneden zodat de pin over het printwerk schraapt. Oplossing die lijkt te werken. Bovenop de BLTouch het schroefje loshalen zodat je de pin kunt verwijderen. De Pin en de schroef op een magneet leggen zodat deze weer magnetisch wordt. Tot op heden blijf hij nu goed hangen tijdens het printen.[/i] 
+[br]
+[h2]Tips voor problemen met 3D prints[/h2]
+
+[list]
+[li][url="https://ultimaker.com/en/resources/troubleshooting/3d-prints"]Ultimaker Troubleshooting 1[/url][/li]
+[/list]
+
+[h2]De handleiding der handleidingen van Luke Hatfield[/h2]
+
+[list]
+[li][url="http://c3d.media/3d-printer-help-guide-creality-others/?fbclid=IwAR0o-4zvp_vSePyZQA4IgVUaenU-9b7-Jcez2p6egjE_CLgTtqt2PLtfw94"]Help Guide with assembly, tuning,and troubleshooting tutorials[/url][/li]
+[/list]
