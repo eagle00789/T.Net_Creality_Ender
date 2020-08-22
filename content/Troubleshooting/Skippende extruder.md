@@ -1,0 +1,3 @@
+## De extruder skipt
+
+Je hebt waarschijnlijk een verstopte nozzle. Dit kan door veel verschillende redenen gebeurd zijn. Een van de redenen kan zijn door issues met de PTFE koppelingen. Haal de PTFE buis uit de hotend en maak alles schoon. Zorg dat de PTFE buis weer goed diep in de hotend komt, tegen de heatbreak aan. Zorg er ook voor dat de koppelingen goed zitten. Het beste is de koppelingen te vervangen en de PTFE buis te vervangen met Capricorn rube. 
