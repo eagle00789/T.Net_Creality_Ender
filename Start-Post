@@ -3,11 +3,10 @@
 [center][img=264,191]https://github.com/eagle00789/T.Net_Creality_Ender/raw/master/images/CrealityEnder_Logo.png[/img][/center]
 [justify]
 [h2]Introductie Creality[/h2]
-[url=https://www.creality3dofficial.com/]Creality[/url] is een Chinees bedrijf uit Shenzhen en heeft verschillende printers op de markt gebracht met wisselend succes. De meeste printers van Creality zijn gebaseerd op het [url="https://reprap.org/wiki/Prusa_i3"]reprap Prusa i3 design[/url].
+[url="https://www.creality.com/"]Creality[/url] is een Chinees bedrijf uit Shenzhen en heeft verschillende printers op de markt gebracht met wisselend succes. De meeste printers van Creality zijn gebaseerd op het [url="https://reprap.org/wiki/Prusa_i3"]reprap Prusa i3 design[/url].
 
-Creality bestaat sinds 2014 maar heeft zichzelf op de kaart gezet in 2017 met de [url=https://www.creality.com/goods-detail/cr-10-3d-printer/]CR-10[/url] printer. Dit is een 300x300x400mm 3D printer die voor een relatief lage prijs weggezet werd. De print kwaliteit was spectaculair in verhouding tot de prijs en hierdoor is deze printer door zo goed als de hele 3D print community in eind 2017 de hemel in geprezen. Om dit in verhouding te zetten, de Anet A8 was de grootste concurent in dit segment en deze verliest een vergelijking op alle fronten behalve de prijs. Daarnaast is een stock Anet A8 brand gevaarlijk. Helaas waren de eerste CR-10 printers dit ook, maar hier kom ik later op terug.
-
-De CR-10 is opgevolgd door de CR-10S waarbij enkele verbeteringen zij doorgevoerd, waaronder de belangrijkste upgrades het moederbord (CR-10 heeft een [url="https://reprap.org/wiki/Melzi"]Melzi design[/url], CR-10S [url="https://reprap.org/wiki/List_of_electronics#8_bits_community_based.2C_tested_and_supported_electronics"]een RAMPS design[/url]) en de CR-10S is weer opgevolgd door de CR-10S Pro, wat een "single extruder" variant is van de (gefaalde) "dual extruder" CR-X.
+Creality bestaat sinds 2014 maar heeft zichzelf op de kaart gezet in 2017 met de [url="https://www.creality.com/goods-detail/cr-10-3d-printer/"]CR-10[/url] printer. Dit is een 300x300x400mm 3D printer die voor een relatief lage prijs weggezet werd. De print kwaliteit was spectaculair in verhouding tot de prijs en hierdoor is deze printer door zo goed als de hele 3D print community in eind 2017 de hemel in geprezen. Om dit in verhouding te zetten, de Anet A8 was de grootste concurent in dit segment en deze verliest een vergelijking op alle fronten behalve de prijs. Daarnaast is een stock Anet A8 brand gevaarlijk. Helaas waren de eerste CR-10 (en Ender 3) printers dit ook, maar hier kom ik later op terug.
+Creality bracht in maart 2018 de [url="https://www.creality.com/goods-detail/ender-3-3d-printer"]Ender 3[/url] uit, de printer die bekend staat als een betaalbare hobby printer. Op het moment zijn er verschillende varianten verkrijgbaar, [url="https://www.creality.com/goods-detail/ender-3-3d-printer"]Ender 3[/url], [url="https://www.creality.com/goods-detail/ender-3-pro-3d-printer"]Ender 3 Pro[/url] & [url="https://www.creality.com/goods-detail/ender-3-v2-3d-printer"]Ender 3 V2[/url].
 
 Creality heeft op bepaalde vlakken een goede naam in de community opgebouwd echter zijn er ook wat mindere zaken.
 [b]De goede zaken:[/b]
@@ -22,18 +21,21 @@ Creality heeft op bepaalde vlakken een goede naam in de community opgebouwd echt
 [li]Creality nam het in het begin niet zo nauw met de GPL licentie en publiceerde de source code niet van de printers[/li]
 [li]Creality had "thermal runaway protection" uit gezet in alle firmwares, wat voor brandgevaar zorgde[/li]
 [li]Creality implementeerd aanpassingen in printers zonder de naam of versie van het model te wijzigen dus is het een loterij of je een oud of nieuw model krijgt van dezelfde printer. (Dit gebeurd helaas anno 2020 nog steeds)[/li]
-[li]Bepaalde versies van CR-10S moederborden (2.0) hebben te zwakke condensatoren aan boord waardoor de hotend na een tijd niet meer stabiel verhit.[/li]
+[li]Kwaliteit van printpraat of daarbij horende onderdelen zijn niet altijd van de beste kwaliteit.[/li]
 [/list]
 
 [br]
 [h2]Ender 3 Technische details[/h2]
 Creality heeft in 2018 de Ender 3 op de markt gebracht. Deze printer is als open source printer op de markt gebracht en kan dus door iedereen vrij gemaakt worden. Dit gebeurd dan ook veel en zijn er veel "namaak" Ender 3 printers in omloop. "Namaak" bedoel ik mee, niet gemaakt door Creality. Zolang de kwaliteit van de onderdelen goed is maakt het weinig uit wie de printer maakt. Alles van de Ender 3 (PCB files, B.O.M. etc.) kun je [url="https://github.com/Creality3DPrinting/Ender-3"]hier[/url] vinden.
 
-De Ender 3 heeft een 24 volt Power Supply aan board en alle elektronische zaken zoals hotend, fans, moederbord, etc. werken dus op 24 volt. Wanneer je wilt bepaalde onderdelen wilt upgraden (bijv.:E3D V6 hotend, nieuwe fans, leds) zul je dus moeten zorgen dat deze werken op 24 volt.
+De Ender 3 heeft een 24 volt Power Supply aan board en alle elektronische zaken zoals hotend, fans, moederbord, etc. werken dus op 24 volt. Wanneer je bepaalde onderdelen wilt upgraden (bijv.:E3D V6 hotend, nieuwe fans, leds) zul je dus moeten zorgen dat deze werken op 24 volt.
 Wel is het uiteraard mogelijk om gebruik te maken van een buck converter om zo bepaalde onderdelen te laten werken op een andere voltage.
 
+Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat de gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
+In de verschillende varianten zijn zowel upgrades uitgevoerd, bijvoorbeeld een betere voeding en implementeerd de "hacks" van gebruikers. De verschillen tussen de varianten worden later aan bod genomen.
+
 // Need update, meerdere verschillende moederborden in omloop.
-Het moederbord (zoals eerder gemeld) is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
+Het moederbord is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
 
 De Ender 3 gebruikt een aangepaste versie van [url="https://github.com/MarlinFirmware/Marlin/"]Marlin firmware[/url] waarbij Creality een feature heeft toegevoegd "power loss print resume". Deze feature schrijft constant de print status weg naar de SD kaart zodat als de stroom uit valt, de printer verder kan waar hij gebleven is. Het grote nadeel hier aan is dat er gigantisch veel writes naar de SD kaart gaan. Dit is zeer slecht voor de levensduur van de sd kaart.
 // Need update, niet meer waar bij nieuwere varianten
