@@ -31,8 +31,9 @@ Creality heeft in 2018 de Ender 3 op de markt gebracht. Deze printer is als open
 De Ender 3 heeft een 24 volt Power Supply aan board en alle elektronische zaken zoals hotend, fans, moederbord, etc. werken dus op 24 volt. Wanneer je bepaalde onderdelen wilt upgraden (bijv.:E3D V6 hotend, nieuwe fans, leds) zul je dus moeten zorgen dat deze werken op 24 volt.
 Wel is het uiteraard mogelijk om gebruik te maken van een buck converter om zo bepaalde onderdelen te laten werken op een andere voltage.
 
-Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat de gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
+Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
 In de verschillende varianten zijn zowel upgrades uitgevoerd, bijvoorbeeld een betere voeding en implementeerd de "hacks" van gebruikers. De verschillen tussen de varianten worden later aan bod genomen.
+Er zijn ook externe partijen die specifieke upgrades maken voor de Ender 3, bijvoorbeeld [url="http://www.bigtree-tech.com"]Big Tree Tech[/url]. Zij bieden verschillende upgrades aan zoals (Touchscreen) schermen en moederborden.
 
 // Need update, meerdere verschillende moederborden in omloop.
 Het moederbord is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
@@ -43,17 +44,23 @@ Creality verzaakt om een zogenaamde bootloader te burnen op de moederborden. Wan
 
 [br]
 // Need update, comparison tussen E3, Pro & V2
-[h2]Ender 3 vs Pro verschillen[/h2] 
-Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar twee versies die echt verschillen van elkaar.
-De Ender 3 en de Ender 3 Pro.
-Het verschil tussen deze twee modellen is een 2040 profiel voor de X as (Bed rollers) op de Ender 3 en een 4040 profiel voor de X as op de Ender 3 pro. Op de Pro zitten de rollers dus twee keer zo ver van elkaar wat voor betere stabiliteit zorgt.
+[h2]Ender 3 vs Pro vs V2 verschillen[/h2] 
+Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar drie versies die echt verschillen van elkaar.
+De Ender 3, de Ender 3 Pro en de Ender 3 V2.
 
-De Ender 3 Pro heeft een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft.
+De Ender 3 word geleverd met een 2040 profiel voor de X as (Bed rollers), de Ender 3 Pro & V2 worden geleverd met een 4040 profiel, hier zitten dus de rollers twee keer zo ver van elkaar wat voor betere stabiliteit zorgt.
 
-De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt. Bij de Ender 3 Pro is deze omgedraaid.
+De Ender 3 Pro & Ender 3 V2 hebben een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft. De Ender 3 komt met een typische chinese voeding.
 
-Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed. Dit is erg handig voor PLA en PETG prints die zo makkelijk van het bed te krijgen zijn.
-Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!
+De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt.
+Bij de Ender 3 Pro & Ender 3 V2 is de control box omgedraait waardoor de sleuven aan de onderkant zitten. Hierdoor zit ook direct de SD & USB positie aan de bovenkant omdat ook de moederbord is om gedraaid.
+
+De Ender 3 V2 komt met een 32 Bit moederboard met nieuwe stepper motor drivers, hierdoor is de printer een stuk stiller.
+Met de V2 probeert Creality nog toegankelijker te worden voor hobbyisten. Zo krijg je er een 4.3 kleurenscherm bij met een vernieuwd UI en is het stellen van je riemen makkelijker doormiddel van een draaiknop.
+
+Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed(Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!), de Ender 3 V2 word geleverd met een glasplaat.
+
+TODO: Tabel met verschillen.
 
 [/justify]
 [center][img=469,474]https://i.imgur.com/wx3k9Ij.png[/img][/center]
