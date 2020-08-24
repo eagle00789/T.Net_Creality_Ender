@@ -67,7 +67,7 @@ TODO: Tabel met verschillen.
 [justify]
 [br]
 // Need update, fix links
-[h2]Populaire upgrades Ender 3 (kopen)[/h2]
+[h2]Populaire niet printbare upgrades[/h2]
 Een lijstje van veel voorkomende gekochte upgrades voor de Ender 3.
 
 Achter elke upgrade staan een of meerdere links naar webshops. Let op dat prijzen erg wisselend kunnen zijn dus kijk vooral ook bij andere aanbieders!
@@ -156,12 +156,14 @@ Hier onder een lijst met de meest voorkomende issues en daarbij tips om deze te 
 
 [br]
 [h2]Ik wil ook een Ender 3 kopen. Waar kan ik deze het beste kopen?[/h2]
-Op het moment van schrijven kost een Ender 3 rond de €150 en kan Creality deze direct leveren uit Duitsland. Het duurt minder dan een week om het te leveren en je betaald geen invoerrechten gezien het uit de EU komt.
-Mijn ervaring is AliExpress de beste manier om direct bij Creality te bestellen ivm de Duitse warehouses. Creality heeft twee AliExpress shops. [url="https://creality3d.nl.aliexpress.com/store/2846085"]Creality 3D Official[/url] en [url="http://nl.aliexpress.com/store/3033013"]Ender 3 Official[/url]
+Ender 3 is inmiddels via verschillende kanalen te verkrijgen: Via Creality, Nederlandse webshops, Aliexpress/Banggood en andere retailers in de EU.
+Creality heeft twee AliExpress shops. [url="https://creality3d.nl.aliexpress.com/store/2846085"]Creality 3D Official[/url] en [url="http://nl.aliexpress.com/store/3033013"]Ender 3 Official[/url]
+Vaak staan de producten op voorraad in de EU, dit betekent een snellere levering en het douane process is al voltooid. Je loopt dus geen risico op extra kosten, zoals invoerrechten en BTW.
+Ook via de officiele webshop van Creality zijn de producten beschikbaar in de EU. Wij raden aan om een van deze 3 shops gebruik te maken, tenzij je graag wilt steunen op de Europese consumenten rechten.
+Op het moment van schrijven kost een Ender 3 rond de €150, Ender 3 Pro rond de €170 en de Ender 3 V2 €230.
 
-[url="https://www.gearbest.com/3d-printers-3d-printer-kits/pp_1845899.html?wid=1640583"]GearBest[/url] etc. bieden de Ender 3 ook aan, Kies hierbij voor een warehouse die gevestigd is in Europa om extra kosten te voorkomen. Als je een bepaalde warehouse niet meer ziet staan komt dit meestal omdat de voorraad op is. Bij het product kun je aangeven vanuit welk warehouse de printer geleverd moet worden. Om te achterhalen welke code bij welk warehouse hoort kun je hier een [url="https://couponsfromchina.com/2018/03/26/gearbest-warehouse-location/"]lijst[/url] vinden. Vanuit Frankrijk duurde dit 6 dagen en werd de printer via GLS afgeleverd. Tijdens het bestellen kun je voor 5 euro extra je printer verzekeren tijdens vervoer en wordt deze zonder problemen omgeruild. Zelf heb ik dit wel gedaan. Achteraf bleek het controller board een hoge pieptoon te geven als deze via usb wordt aangesloten. Zonder problemen wordt er nu een nieuw controller board opgestuurd. Of dit door de extra 5 euro service kwam weet ik niet maar is was mij het waard.
+In Nederland is 123-3D een vertrouwde leverancier van 3D printers en accessories. Inprincipe binnen 1 dag geleverd en Nederlandse garantie, hier betaal je dan ook voor, deze zijn tussen de 30 - 60 euro duurder. 
 
-Er zijn ook leveranciers in Nederland zoals 123-3d. Hier heb je volledige garantie volgens de Nederlandse wet, maar hier betaal je ook voor. Er zit op moment van schrijven €100 prijs verschil tussen direct van Creality en de Nederlandse aanbieders.
 [br]
 [h2]Ik heb een Ender 3 (Pro) gekocht. Hoe zet ik deze het beste in elkaar?[/h2]
 Hieronder enkele kwalitatief goede build videos
