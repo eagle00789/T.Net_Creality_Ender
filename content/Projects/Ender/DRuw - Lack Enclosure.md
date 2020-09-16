@@ -20,12 +20,11 @@ Het hoekige model vind ik wel strak maar ik haat van die losse scharnieren dus d
 Eerst gemeten en uiteindelijke een verhoging van 15cm gevonden als mooie hoogte.
 Wellicht was het een idee om eerst de details te printen om te kijken of dat lukte maar och, hij stond toch snachts aan dus ben iedere keer hele modellen gaan printen.
 Alles ging redelijk al heb ik wel wat iteraties van het model gehad voor het helemaal naar mn zin was.
-Als je alles geprint hebt heb je deze extenders:
-https://tweakers.net/i/AD...GP.jpg?f=fotoalbum_medium
-De scharnieren heb ik in dezelfde stijl verzonnen: https://tweakers.net/i/JV...oa.jpg?f=fotoalbum_medium
-Ook de handgreepjes en de stop erachter zijn in dezelfde stijl: https://tweakers.net/i/0w...oE.jpg?f=fotoalbum_medium
+Als je alles geprint hebt heb je deze extenders: [url="https://tweakers.net/i/vACC_hvNeGLGZBAdkmmUjB7Wlw8=/full-fit-in/4920x3264/filters:max_bytes(3145728):no_upscale():strip_icc():fill(white):strip_exif()/f/image/AVF7CjtJQotWDYqqXN4ayQGP.jpg?f=user_large"]Afbeelding 1[/url]
+De scharnieren heb ik in dezelfde stijl verzonnen: [url="https://tweakers.net/i/JH2_qwHvkJm63DVC2KlM4n_7p6o=/full-fit-in/4920x3264/filters:max_bytes(3145728):no_upscale():strip_icc():fill(white):strip_exif()/f/image/b0guX1I0CsIMVW27ykM2JVoa.jpg?f=user_large"]Afbeelding 2[/url]
+Ook de handgreepjes en de stop erachter zijn in dezelfde stijl: [url="https://tweakers.net/i/8yS-OQJ2-GD95nqKzfaWi-eH3_0=/full-fit-in/4920x3264/filters:max_bytes(3145728):no_upscale():strip_icc():fill(white):strip_exif()/f/image/iWEyNRuFQfJmv2hfc2cv0RoE.jpg?f=user_large"]Afbeelding 3[/url]
 Eindresultaat is dit:
-https://tweakers.net/i/yq...Lf.jpg?f=fotoalbum_medium
+[url="https://tweakers.net/i/yqhOjK_tj5MXbnKygodFlAEwOQA=/234x176/filters:strip_icc():strip_exif()/f/image/IH8GCjNHgRYGktVwQgkOLULf.jpg?f=fotoalbum_medium"]Afbeelding 4[/url]
 
 Leermomentjes:
 - Lack tafeltje (KLEINER!) voorboren om hem helemaal strak te monteren.
