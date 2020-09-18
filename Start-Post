@@ -53,14 +53,14 @@ De Ender 3 word geleverd met een 2040 profiel voor de X as (Bed rollers), de End
 De Ender 3 Pro & Ender 3 V2 hebben een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft. De Ender 3 komt met een typische chinese voeding.
 
 De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt.
-Bij de Ender 3 Pro & Ender 3 V2 is de control box omgedraait waardoor de sleuven aan de onderkant zitten. Hierdoor zit ook direct de SD & USB positie aan de bovenkant omdat ook de moederbord is om gedraaid.
+Bij de Ender 3 Pro & Ender 3 V2 is de control box omgedraaid waardoor de ventilatie sleuven aan de onderkant zitten, hierdoor is ook de SD & USB mee omgedraaid, de moederbord zit nu aan de bovenkant bevestigd.
 
 De Ender 3 V2 komt met een 32 Bit moederboard met nieuwe stepper motor drivers, hierdoor is de printer een stuk stiller.
-Met de V2 probeert Creality nog toegankelijker te worden voor hobbyisten. Zo krijg je er een 4.3 kleurenscherm bij met een vernieuwd UI en is het stellen van je riemen makkelijker doormiddel van een draaiknop.
+Met de V2 probeert Creality nog toegankelijker te worden voor hobbyisten. Zo krijg je er een 4.3 inch kleurenscherm bij met een vernieuwd UI en is het stellen van je riemen makkelijker doormiddel van een draaiknop.
 
 Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed(Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!), de Ender 3 V2 word geleverd met een glasplaat.
 
-TODO: Tabel met verschillen.
+TODO: Tabel met specificatie verschillen.
 
 [/justify]
 [center][img=469,474]https://i.imgur.com/wx3k9Ij.png[/img][/center]
