@@ -32,18 +32,14 @@ De Ender 3 heeft een 24 volt Power Supply aan board en alle elektronische zaken 
 Wel is het uiteraard mogelijk om gebruik te maken van een buck converter om zo bepaalde onderdelen te laten werken op een andere voltage.
 
 Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
-In de verschillende varianten zijn zowel upgrades uitgevoerd, bijvoorbeeld een betere voeding en implementeerd de "hacks" van gebruikers. De verschillen tussen de varianten worden later aan bod genomen.
+In de verschillende Ender varianten zijn ook upgrades uitgevoerd, bijvoorbeeld een betere voeding en implementeerd de "hacks" van gebruikers. De verschillen tussen de varianten worden later aan bod genomen.
 Er zijn ook externe partijen die specifieke upgrades maken voor de Ender 3, bijvoorbeeld [url="http://www.bigtree-tech.com"]Big Tree Tech[/url]. Zij bieden verschillende upgrades aan zoals (Touchscreen) schermen en moederborden.
 
-// Need update, meerdere verschillende moederborden in omloop.
-Het moederbord is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
-
-De Ender 3 gebruikt een aangepaste versie van [url="https://github.com/MarlinFirmware/Marlin/"]Marlin firmware[/url] waarbij Creality een feature heeft toegevoegd "power loss print resume". Deze feature schrijft constant de print status weg naar de SD kaart zodat als de stroom uit valt, de printer verder kan waar hij gebleven is. Het grote nadeel hier aan is dat er gigantisch veel writes naar de SD kaart gaan. Dit is zeer slecht voor de levensduur van de sd kaart.
-// Need update, niet meer waar bij nieuwere varianten
-Creality verzaakt om een zogenaamde bootloader te burnen op de moederborden. Wanneer je zelf firmware wilt flashen (bijvoorbeeld stock Marlin) zal je EERST een bootloader moeten burnen alvorens te flashen. Dit kun je doen met behulp van (bijvoorbeeld) een Arduino Uno.
+De Ender 3 gebruikt een aangepaste versie van [url="https://github.com/MarlinFirmware/Marlin/"]Marlin firmware[/url].
+Om je eigen firmware te willen flashen is het nodig om een bootloader te burnen op de moederbord, Creality deed dit tot ongeveer 2020 niet waardoor je zelf een bootloader moest burnen voor het flashen. Dit kun je doen met behulp van (bijvoorbeeld) een Arduino Uno.
+Tegenwoordig worden deze dus wel geleverd met een bootloader waardoor het flashen direct gedaan kan worden doormiddel van een SD kaart.
 
 [br]
-// Need update, comparison tussen E3, Pro & V2
 [h2]Ender 3 vs Pro vs V2 verschillen[/h2] 
 Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar drie versies die echt verschillen van elkaar.
 De Ender 3, de Ender 3 Pro en de Ender 3 V2.
@@ -55,12 +51,11 @@ De Ender 3 Pro & Ender 3 V2 hebben een MeanWell PSU aan boord. MeanWell is een g
 De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt.
 Bij de Ender 3 Pro & Ender 3 V2 is de control box omgedraaid waardoor de ventilatie sleuven aan de onderkant zitten, hierdoor is ook de SD & USB mee omgedraaid, de moederbord zit nu aan de bovenkant bevestigd.
 
-De Ender 3 V2 komt met een 32 Bit moederboard met nieuwe stepper motor drivers, hierdoor is de printer een stuk stiller.
+De Ender 3 V2 komt met een 32 Bit moederboard met nieuwe stepper motor drivers, hierdoor heb je meer ruimte voor firmware functies en is de printer een stuk stiller.
 Met de V2 probeert Creality nog toegankelijker te worden voor hobbyisten. Zo krijg je er een 4.3 inch kleurenscherm bij met een vernieuwd UI en is het stellen van je riemen makkelijker doormiddel van een draaiknop.
+Tevens kan je bij de oudere Ender 3's zelf het moederbord vervangen naar een (aftermarket) 32bit moederbord. Tegenwoordig levert Creality ook de moederbord versie 4.2.2 mee met de oudere Ender 3's, dit is een 32 Bit bord zonder stille stepper motor drivers.
 
 Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed(Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!), de Ender 3 V2 word geleverd met een glasplaat.
-
-TODO: Tabel met specificatie verschillen.
 
 [/justify]
 [center][img=469,474]https://i.imgur.com/wx3k9Ij.png[/img][/center]
