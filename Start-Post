@@ -31,8 +31,9 @@ Creality heeft in 2018 de Ender 3 op de markt gebracht. Deze printer is als open
 De Ender 3 heeft een 24 volt Power Supply aan board en alle elektronische zaken zoals hotend, fans, moederbord, etc. werken dus op 24 volt. Wanneer je bepaalde onderdelen wilt upgraden (bijv.:E3D V6 hotend, nieuwe fans, leds) zul je dus moeten zorgen dat deze werken op 24 volt.
 Wel is het uiteraard mogelijk om gebruik te maken van een buck converter om zo bepaalde onderdelen te laten werken op een andere voltage.
 
-Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat de gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
+Ender 3 staat om bekend om een van de meest 'gehackte' 3D printer te zijn, dit omdat gebruikers veel verschillende upgrades hebben uitgevoerd, zowel als hardware als eigen geprinte 'onderdelen'. 
 In de verschillende varianten zijn zowel upgrades uitgevoerd, bijvoorbeeld een betere voeding en implementeerd de "hacks" van gebruikers. De verschillen tussen de varianten worden later aan bod genomen.
+Er zijn ook externe partijen die specifieke upgrades maken voor de Ender 3, bijvoorbeeld [url="http://www.bigtree-tech.com"]Big Tree Tech[/url]. Zij bieden verschillende upgrades aan zoals (Touchscreen) schermen en moederborden.
 
 // Need update, meerdere verschillende moederborden in omloop.
 Het moederbord is een Melzi design moederbord. Dit draait op een ATmega1284P CPU en deze heeft (helaas) maar 128K Bytes programmable flash geheugen. In contrast, de Atmega2560 heeft 256k aan boord. Dit limiteert de mogelijkheden om alternatieve firmwares te flashen. 
@@ -43,24 +44,30 @@ Creality verzaakt om een zogenaamde bootloader te burnen op de moederborden. Wan
 
 [br]
 // Need update, comparison tussen E3, Pro & V2
-[h2]Ender 3 vs Pro verschillen[/h2] 
-Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar twee versies die echt verschillen van elkaar.
-De Ender 3 en de Ender 3 Pro.
-Het verschil tussen deze twee modellen is een 2040 profiel voor de X as (Bed rollers) op de Ender 3 en een 4040 profiel voor de X as op de Ender 3 pro. Op de Pro zitten de rollers dus twee keer zo ver van elkaar wat voor betere stabiliteit zorgt.
+[h2]Ender 3 vs Pro vs V2 verschillen[/h2] 
+Er worden meerdere versies van de Ender 3 online aangeboden, maar er zijn maar drie versies die echt verschillen van elkaar.
+De Ender 3, de Ender 3 Pro en de Ender 3 V2.
 
-De Ender 3 Pro heeft een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft.
+De Ender 3 word geleverd met een 2040 profiel voor de X as (Bed rollers), de Ender 3 Pro & V2 worden geleverd met een 4040 profiel, hier zitten dus de rollers twee keer zo ver van elkaar wat voor betere stabiliteit zorgt.
 
-De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt. Bij de Ender 3 Pro is deze omgedraaid.
+De Ender 3 Pro & Ender 3 V2 hebben een MeanWell PSU aan boord. MeanWell is een gerenomeerd merk voor PSU's en is de kans kleiner dat deze de geest geeft. De Ender 3 komt met een typische chinese voeding.
 
-Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed. Dit is erg handig voor PLA en PETG prints die zo makkelijk van het bed te krijgen zijn.
-Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!
+De Ender 3 heeft ventilatie sleuven aan de bovenkant van de control box. Dit is niet handig gezien er 3D print residu en stof in kan komen. Hier zijn community fixes voor maar daar kom ik later op terug. Ook zit de SD kaart aansluiting aan de onderkant waar je met je vingers lastig bij komt.
+Bij de Ender 3 Pro & Ender 3 V2 is de control box omgedraaid waardoor de ventilatie sleuven aan de onderkant zitten, hierdoor is ook de SD & USB mee omgedraaid, de moederbord zit nu aan de bovenkant bevestigd.
+
+De Ender 3 V2 komt met een 32 Bit moederboard met nieuwe stepper motor drivers, hierdoor is de printer een stuk stiller.
+Met de V2 probeert Creality nog toegankelijker te worden voor hobbyisten. Zo krijg je er een 4.3 inch kleurenscherm bij met een vernieuwd UI en is het stellen van je riemen makkelijker doormiddel van een draaiknop.
+
+Als laatste verschil heeft de Ender 3 Pro een magnetisch printbed(Let wel dat de maximale temperatuur 70 graden mag zijn. Hogere bed temperaturen zorgen er voor dat de magnetische kracht verloren gaat!), de Ender 3 V2 word geleverd met een glasplaat.
+
+TODO: Tabel met specificatie verschillen.
 
 [/justify]
 [center][img=469,474]https://i.imgur.com/wx3k9Ij.png[/img][/center]
 [justify]
 [br]
 // Need update, fix links
-[h2]Populaire upgrades Ender 3 (kopen)[/h2]
+[h2]Populaire niet printbare upgrades[/h2]
 Een lijstje van veel voorkomende gekochte upgrades voor de Ender 3.
 
 Achter elke upgrade staan een of meerdere links naar webshops. Let op dat prijzen erg wisselend kunnen zijn dus kijk vooral ook bij andere aanbieders!
@@ -136,37 +143,43 @@ Printbare upgrades voor Ender 3
 [/list]
 [br]
 [h2]Veel voorkomende issues[/h2]
-Er zijn eigenlijk niet zoveel veel voorkomende issues met de Ender 3, maar de issues die ik veel gezien heb zal ik hier noemen.
-[b]De extruder skipped[/b] - Je hebt waarschijnlijk een verstopte nozzle. Dit kan door veel verschillende redenen gebeurd zijn. Een van de redenen kan zijn door issues met de PTFE koppelingen. Haal de PTFE buis uit de hotend en maak alles schoon. Zorg dat de PTFE buis weer goed diep in de hotend komt, tegen de heatbreak aan. Zorg er ook voor dat de koppelingen goed zitten. Het beste is de koppelingen te vervangen en de PTFE buis te vervangen met Capricorn. 
-[b]De printer gaat niet meer aan[/b] - Er is een grote kans dat de power supply stuk is gegaan. Dit is vaak een condensator. Dit is zelf te fixen, maar is niet aan te raden. Vervang de PSU met een gerenomeerd merk zoals MeanWell (dit model zit al in de Ender 3 Pro). Het komt soms ook voor dat de 24v connectors op de PSU smelten ivm slechte bouw kwaliteit.
-[b]De connector van de PSU naar de controlbox is gesmolten[/b] - Helaas gebeurd dit nog wel eens. Vervang de gesmolten kabels en koop nieuwe XT60 connectors.
-[b]Mijn prints komen nooit goed van de printer, help![/b] - Er kan ontzettend veel mis zijn. Ook een combinatie van meerdere zaken.
-[list]
-[li]Het is belangrijk dat de printer goed in elkaar gezet is. Alle hoeken goed 90 graden op elkaar, belts strak, rollers goed afgesteld (niet te los en niet te strak)[/li]
-[li]Het bed moet goed level zijn. Dit is van uiterst belang. De eerste laag is het fundament van je print. [/li] 
-
-[li]Zorg er voor dat je filament van goede kwaliteit is en niet vochtig. Vochtig filament print heel slecht. Verschillende soorten filament zijn meer of minder vatbaar voor vocht, maar het blijft een veelvoorkomend issue.[/li]
-[li]Print op de juiste temperatuur voor je filament en print niet te snel.[/li]
-[/list]
-
-[b]Filament blijft niet plakken op het printbed[/b]
+Er zijn veel vervelende situaties waar je tegen aan kunt lopen. Mede door de grote community is voor bijna elk probleem wel iets te vinden.
+Zulke problemen kunnen soms lastig op te lossen zijn, dit komt voornamelijk omdat het verschillende oorzaken kunt hebben
+Hier onder een lijst met de meest voorkomende issues en daarbij tips om deze te verhelpen.
+[h3]PSU Connector gesmolten[/h3]
+Helaas gebeurde dit nog wel eens bij de eerste versies van de Ender 3 waar goedkope XT60 connectoren zijn gebruikt geworden. Vervang de gesmolten kabels met nieuwe XT60 connectors.
+[h3]Printer gaat niet aan[/h3]
+Er is een grote kans dat de power supply stuk is gegaan. Dit is vaak een condensator. Dit is zelf te repareren, maar is niet aan te raden als je geen verstand hebt van de elecronica. Vervang de PSU met een gerenomeerd merk zoals MeanWell (dit model zit al in de Ender 3 Pro). Het komt soms ook voor dat de 24v connectors op de PSU smelten ivm slechte bouw kwaliteit.
+[h3]Printer start niet altijd correct[/h3]
+Als je zelf je firmware hebt geflasht, dan kan het zijn dat je huidig geflashte Marlin firmware te vol zit voor een correcte werking. Kijk of je in je firmware items kunt uitschakelen zodat je de grootte van je firmware kunt verkleinen en hiermee ruimte over houd voor het correct starten van de printer.
+[h3]Prints blijven niet plakken[/h3]
 Zorg dat de nozzel goed is afgesteld tov alle hoeken van het printbed. Door tussen de nozzel en het printbed een papiertje te steken en dan de wieltjes te draaien kun je die goed afstellen. Zorg dat het papier net contact maakt met het papier. Zo ga je langs elke hoek en eindigt in het midden om te testen of het daar ook goed is. Herhaal nu alle stappen nogmaals. Omdat je elke hoek instelt veranderden de overige hoeken ook weer licht. Door deze stappen 2x uit te voeren zorg je voor een goede afstellingen van het printbed tov van de nozzel. Via TH3D kun je via het menu op je printer kiezen voor Prepare --> Level Corners. De nozzel wordt naar de eerste hoek gebracht. Nadat je deze hoek hebt afgesteld kies je voor Next Point.
-
-Een handig uitleg met een snellere manier kun [url="https://www.youtube.com/watch?v=_EfWVUJjBdA"]hier[/url] vinden.
-
+Een handig uitleg met een snellere manier kun je [url="https://www.youtube.com/watch?v=_EfWVUJjBdA"]hier[/url] vinden.
 Hoe vaak je dit moet doen daarover verschillen de meningen en is een kwestie van uitproberen. Zeker als je veranderd van filament of je merkt dat je prints niet goed meer hechten is het tijd om dit weer een keer uit te voeren. 
-
-Een handig site met veel voorkomende problemen en uitleg.
-https://www.simplify3d.com/support/print-quality-troubleshooting/
+Een handig site met veel voorkomende problemen en uitleg is [url="https://www.simplify3d.com/support/print-quality-troubleshooting/"]hier[/url] te vinden
+[h3]Prints mislukken[/h3]
+Er kan ontzettend veel mis zijn. Ook een combinatie van meerdere zaken.
+[list]
+    [li]Het is belangrijk dat de printer goed in elkaar gezet is. Alle hoeken goed 90 graden op elkaar, belts strak, rollers goed afgesteld (niet te los en niet te strak)[/li]
+    [li]Het bed moet goed level zijn. Dit is van uiterst belang. De eerste laag is het fundament van je print.[/li]
+    [li]Zorg er voor dat je filament van goede kwaliteit is en niet vochtig. Vochtig filament print heel slecht. Verschillende soorten filament zijn meer of minder vatbaar voor vocht, maar het blijft een veelvoorkomend issue.[/li]
+    [li]Print op de juiste temperatuur voor je filament en print niet te snel.[/li]
+[/list]
+[h3]De extruder skipt[/h3]
+Je hebt waarschijnlijk een verstopte nozzle. Dit kan door veel verschillende redenen gebeurd zijn. Een van de redenen kan zijn door issues met de PTFE koppelingen. Haal de PTFE buis uit de hotend en maak alles schoon. Zorg dat de PTFE buis weer goed diep in de hotend komt, tegen de heatbreak aan. Zorg er ook voor dat de koppelingen goed zitten. Het beste is de koppelingen te vervangen en de PTFE buis te vervangen met Capricorn rube.
+[h3]Andere problemen[/h3]
+Kijk voor problemen die hier niet bij staan ook eens op [url="https://github.com/eagle00789/T.Net_Creality_Ender/tree/pre-release/content/Troubleshooting"]deze github[/url] pagina.
 
 [br]
 [h2]Ik wil ook een Ender 3 kopen. Waar kan ik deze het beste kopen?[/h2]
-Op het moment van schrijven kost een Ender 3 rond de €150 en kan Creality deze direct leveren uit Duitsland. Het duurt minder dan een week om het te leveren en je betaald geen invoerrechten gezien het uit de EU komt.
-Mijn ervaring is AliExpress de beste manier om direct bij Creality te bestellen ivm de Duitse warehouses. Creality heeft twee AliExpress shops. [url="https://creality3d.nl.aliexpress.com/store/2846085"]Creality 3D Official[/url] en [url="http://nl.aliexpress.com/store/3033013"]Ender 3 Official[/url]
+Ender 3 is inmiddels via verschillende kanalen te verkrijgen: Via Creality, Nederlandse webshops, Aliexpress/Banggood en andere retailers in de EU.
+Creality heeft twee AliExpress shops. [url="https://creality3d.nl.aliexpress.com/store/2846085"]Creality 3D Official[/url] en [url="http://nl.aliexpress.com/store/3033013"]Ender 3 Official[/url]
+Vaak staan de producten op voorraad in de EU, dit betekent een snellere levering en het douane process is al voltooid. Je loopt dus geen risico op extra kosten, zoals invoerrechten en BTW.
+Ook via de officiele webshop van Creality zijn de producten beschikbaar in de EU. Wij raden aan om een van deze 3 shops gebruik te maken, tenzij je graag wilt steunen op de Europese consumenten rechten.
+Op het moment van schrijven kost een Ender 3 rond de €150, Ender 3 Pro rond de €170 en de Ender 3 V2 €230.
 
-[url="https://www.gearbest.com/3d-printers-3d-printer-kits/pp_1845899.html?wid=1640583"]GearBest[/url] etc. bieden de Ender 3 ook aan, Kies hierbij voor een warehouse die gevestigd is in Europa om extra kosten te voorkomen. Als je een bepaalde warehouse niet meer ziet staan komt dit meestal omdat de voorraad op is. Bij het product kun je aangeven vanuit welk warehouse de printer geleverd moet worden. Om te achterhalen welke code bij welk warehouse hoort kun je hier een [url="https://couponsfromchina.com/2018/03/26/gearbest-warehouse-location/"]lijst[/url] vinden. Vanuit Frankrijk duurde dit 6 dagen en werd de printer via GLS afgeleverd. Tijdens het bestellen kun je voor 5 euro extra je printer verzekeren tijdens vervoer en wordt deze zonder problemen omgeruild. Zelf heb ik dit wel gedaan. Achteraf bleek het controller board een hoge pieptoon te geven als deze via usb wordt aangesloten. Zonder problemen wordt er nu een nieuw controller board opgestuurd. Of dit door de extra 5 euro service kwam weet ik niet maar is was mij het waard.
+In Nederland is 123-3D een vertrouwde leverancier van 3D printers en accessories. Inprincipe binnen 1 dag geleverd en Nederlandse garantie, hier betaal je dan ook voor, deze zijn tussen de 30 - 60 euro duurder. 
 
-Er zijn ook leveranciers in Nederland zoals 123-3d. Hier heb je volledige garantie volgens de Nederlandse wet, maar hier betaal je ook voor. Er zit op moment van schrijven €100 prijs verschil tussen direct van Creality en de Nederlandse aanbieders.
 [br]
 [h2]Ik heb een Ender 3 (Pro) gekocht. Hoe zet ik deze het beste in elkaar?[/h2]
 Hieronder enkele kwalitatief goede build videos
